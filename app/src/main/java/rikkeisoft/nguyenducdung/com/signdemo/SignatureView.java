@@ -22,7 +22,8 @@ import java.io.OutputStream;
 
 public class SignatureView extends View {
     private Context mContext;
-    private int targetWidth = 100, targetHeight = 100;
+    private int targetWidth = 100;
+    private int targetHeight = 100;
     private ISignatureCallBack signatureCallBack;
 
     public void setSignatureCallBack(ISignatureCallBack signatureCallBack) {
@@ -104,7 +105,6 @@ public class SignatureView extends View {
                     mCountDownTimer.start();
                 break;
         }
-        // 更新绘制
         invalidate();
         return true;
     }
